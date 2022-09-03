@@ -1,0 +1,38 @@
+.cod_product_offer_id {
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .cod_product_offers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    flex-wrap: wrap;
+  }
+  .cod_product_offer {
+    display: grid;
+    gap: 0 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 5px;
+    width: fit-content;
+  }
+  .cod_product_offer :is(input, select, div) {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .cso-free-shipping{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+  .cso-free-shipping input{
+    width: 10%;
+    max-width: 10%;
+    min-width: 10%;
+  }
+
+  
+  

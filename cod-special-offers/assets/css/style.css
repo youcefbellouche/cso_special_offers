@@ -1,0 +1,217 @@
+.cod_product_order_form {
+  padding: 20px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 1px 1px 3px var(--light-gray);
+}
+
+.cod_product_order_form_inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.cod_product_order_form_inputs :is(input, select) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 10px;
+  font-size: 1rem;
+  border: 1px var(--light-gray) solid;
+  background-color: white;
+  height: 45px;
+}
+
+.cod_product_order_form_inputs :is(input, select):focus {
+  outline-color: var(--primary-color);
+}
+
+.cod_order_field :is(input, select) {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cod_order_field :is(input, select).error {
+  border: 2px solid rgb(241, 91, 91);
+}
+
+.cod_order_field .err {
+  color: rgb(241, 91, 91);
+}
+
+.cod_product_order_form_add_to_cart_section {
+  display: flex;
+  gap: 10px;
+}
+
+.cod_product_order_form_quantity_section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cod_product_order_form_quantity_section i {
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid var(--light-gray);
+  background-color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cod_product_buy_button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cod-price-text {
+  margin-top: 5px;
+}
+
+.cso-total-price {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.cso_offer_input {
+  margin-bottom: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid var(--light-gray);
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.cso_offer_input input[type=radio] {
+  cursor: pointer;
+}
+
+.cso_offer_price {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 2px;
+  color: var(--primary-color);
+}
+.cso_offer_price_text {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--primary-color);
+  display: inline-block;
+}
+.cso_offer_standard_price {
+  margin-top: 1px;
+}
+.cso_offer_standard_price {
+  color: #6d6d6d;
+  text-decoration: line-through;
+}
+.cod_product_attribute_left_section {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cod_product_attribute_left_section p {
+  font-size: 0.9rem;
+}
+.cod_product_attribute_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.cod_product_attribute_container p {
+  cursor: pointer;
+}
+.cod_product_attribute_container input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  transition: 0.2s all linear;
+}
+.cod_product_attribute_container input:checked {
+  border: none;
+  background-color: var(--primary-color);
+  outline: unset !important;
+}
+.cod_product_review_stars i {
+  color: rgb(205, 205, 1);
+  font-size: 1.2rem;
+}
+.cod_product_order_form{
+  border: 2px solid #e8aa5a;
+  border-radius: 12px;
+}
+@media screen and (max-width:720px) {
+  .cod_product_order_form_inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .cod_product_order_form_add_to_cart_section {
+    margin-top: 20px;
+  }
+
+  .cod_product_order_form_quantity_section {
+    gap: 15px;
+  }
+
+  .cod_product_order_form_quantity_section i {
+    font-size: 0.8rem;
+    background-color: white;
+  }
+  .cod_product_order_form_add_to_cart_section{
+    justify-content: center;
+  }
+  .cod_product_buy_button{
+    z-index:99;
+	width:100%;
+	right:0;
+	height:55px;
+	position:fixed;
+	bottom:0;
+    animation: shake 2s cubic-bezier(.36, .07, .19, .97) both infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, );
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
